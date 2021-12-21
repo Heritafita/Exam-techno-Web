@@ -1,15 +1,35 @@
 <head>
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="SurfaceValue.js"></script>
+    <!-- <script src="SurfaceValue.js"></script> -->
 </head>
 
+<body>
 
-<form action="/" method="post">
-    <!--  "method="get" si on utilise app.get et method="post" si on utilise app.post -->
-    Pièce : <input type="text" name="Room" id="room" /> Largeur : <input type="text" name="Width" value="' + count +'" id="Width" /> Longueur : <input type="text" name="Length" value="' + count +'" id="Length" />
-    <input type="submit" name="Enregister" value="sauver">
-</form>
-<div class="button">
-    <button onclick="RoomSurface()">Calculer la surface</button> Surface :
-    <p id="SurfaceVal"></p>
-</div>
+
+    <h1>
+        Encoder les données de la pièce
+    </h1>
+    <form action="/Room" method="post">
+        Pièce : <input class="label" type="text" name="Room" id="Room" /> </br>
+        Largeur :
+        <input class="label" type="number" name="Width" id="Width" min="0" step="1" /> </br>
+        Longueur :
+        <input class="label" type="number" name="Length" id="Length" min="0" step="1" /> </br>
+        <input class="button" type="submit" name="Save" value="enregistrer"></br>
+        <input class="button" type="submit" name="Appartement" value="Liste des Pièces de l'appartemment" formaction="/Appartement">
+    </form>
+    <div class="button">
+        <button onclick="RoomSurface()">Calculer la surface</button>
+        <p id="SurfaceVal"></p>
+
+        <script type="text/javascript">
+            function RoomSurface() {
+                let Widht = document.getElementById('Widht').value;
+                let Length = document.getElementById('Length').value;
+                let surface = Widht * Length;
+                console.log(surface);
+                SurfaceVal.innerHTML = "Surface :" + surface + "M2";
+            }
+        </script>
+    </div>
+</body>

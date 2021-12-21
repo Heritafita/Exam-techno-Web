@@ -1,0 +1,19 @@
+<head>
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- <script src="SurfaceValue.js"></script> -->
+</head>
+
+<body>
+
+
+    <h1>
+        Liste des pièces de l'appartement
+    </h1>
+    <form action="/" method="post">
+        <% for (let i = 0 ; i < room.length ; i++) { %>
+            Piece :
+            <input class="label" type="text" name="Room" value="<% <%=room[i].Name%>%>+ <% room[i].Surface %> "> /> </br>
+            <% } %>
+                <input class="button" type="submit" name="" value="Liste des Pièces de l'appartemment" formaction="/Appartement">
+    </form>
+</body>

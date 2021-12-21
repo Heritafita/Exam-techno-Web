@@ -1,7 +1,33 @@
-h1 {
-    text-align: center;
-    color: rgb(4, 45, 99);
-    font-weight: bold;
+body {
+    width: 500px;
+    font-style: Arial;
+    font-size: 12px;
+    border: 1px lightgrey solid;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: steelblue;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    float: left;
+}
+
+RoomLine {
+    background-color: lightgrey;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+TotalLine {
+    background-color: blue;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 h2 {
@@ -9,36 +35,4 @@ h2 {
     font-weight: bold;
     font-size: 25px;
     color: rgb(4, 45, 99);
-}
-
-h3 {
-    text-align: left;
-    font-weight: bold;
-    font-size: 20px;
-    color: rgb(4, 45, 99);
-}
-
-.button1 {
-    font-weight: bold;
-    font-size: 20px;
-    color: rgb(3, 97, 81);
-    border: none;
-    border-radius: 3px;
-    background-color: darkgrey;
-    text-decoration: none;
-    margin: 5px 5px;
-}
-
-td {
-    border: 1px solid rgba(129, 127, 127, 0.815);
-}
-
-.button2 {
-    font-size: 18px;
-    color: rgb(3, 97, 81);
-    border: none;
-    border-radius: 3px;
-    background-color: darkgrey;
-    text-decoration: none;
-    margin: 6px 6px;
 }
